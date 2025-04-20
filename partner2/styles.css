@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.userInfo, .todo {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    text-align: left;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.userInfo label {
+    display: block;
+    margin-top: 10px;
+}
+
+.userInfo input, .userInfo select {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+.userInfo input[type="button"] {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.userInfo input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+.todo input[type="text"] {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.todo input[type="button"] {
+    width: 100%;
+    background-color: #45bd61;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.todo input[type="button"]:hover {
+    background-color: #218838;
+}
+
+#todoList {
+    list-style-type: decimal;
+    padding: 0;
+}
+
+#todoList li {
+    padding: 10px;
+}
+
+.back-to-main {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1000;
+    font-size: 14px;
+}

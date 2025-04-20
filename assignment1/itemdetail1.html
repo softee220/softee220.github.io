@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Samsung MV800 Details</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+      .button {
+         margin: 20px 0;
+      }
+
+      .switch-button {
+         padding: 10px 20px;
+         margin: 5px;
+         background-color: #328364;
+         color: white;
+         border: none;
+         border-radius: 20px;
+         cursor: pointer;
+      }
+
+      .switch-button:hover {
+         background-color: #99dda8;
+      }
+
+      #cameraImage {
+         width: 400px;
+         height: 270px;
+         display: block;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Samsung MV800 Digital Camera</h1>
+
+   <div class="button">
+      <button class="switch-button" onclick="nextImage()">View Item Colors</button>
+   </div>
+
+   <img id="cameraImage" src="mycamera11.jpg" alt="Samsung MV800 Camera">
+
+   <p>
+      <em><strong>A classic Year 2000's Digital Compact Camera</strong> able to capture both photos and videos.</em>
+   </p>
+
+   <h3>Key Features:</h3>
+   <ul>
+      <li>16.1 Megapixels</li>
+      <li>5 x Optical Zoom 4.7mm-23.5mm f/3.3-5.9 Lens</li>
+      <li>Photo and Video Capturing</li>
+      <li>Various Shooting modes including Macro</li>
+      <li>Folding LCD Display for selfie feature</li>
+   </ul>
+
+   <a href="index.html">Back to Main Page</a>
+
+   <script>
+      const images = ['mycamera11.jpg', 'mycamera1.jpeg', 'mycamera2.jpg'];
+      let currentIndex = 0;
+
+      function nextImage() {
+         currentIndex = (currentIndex + 1) % images.length;
+         document.getElementById('cameraImage').src = images[currentIndex];
+      }
+   </script>
+</body>
+</html>

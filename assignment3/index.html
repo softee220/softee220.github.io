@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Suim's Kitchen</title>
+   <link rel="stylesheet" href="styles.css">
+   <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Eater&family=Lobster&family=Pacifico&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+</head>
+
+<script>
+  function openLightbox(img) {
+    document.getElementById('lb-img').src = img.src;
+    document.getElementById('lb-text').textContent = img.dataset.text;
+    document.getElementById('lightbox').classList.add('show');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('show');
+  }
+</script>
+
+<body>
+  <a href="../index.html" class="back-to-main">← Back to Main Page</a>
+
+   <header>
+      <h1>Suim's Kitchen</h1>
+   </header>
+
+   <main>
+    <section class="menu-items">
+      <img src="menu1.jpg" alt="Spicy Ramen" data-text="Delicious spicy ramen with pork and egg." onclick="openLightbox(this)">
+      <img src="menu2.jpg" alt="Bibimbap" data-text="Traditional Korean rice bowl with vegetables and beef." onclick="openLightbox(this)">
+      <img src="menu3.jpg" alt="Bulgogi" data-text="Tender beef marinated in a sweet soy-based sauce and stir-fried with fresh vegetables." onclick="openLightbox(this)">
+      <img src="menu4.jpg" alt="Tteokbokki" data-text="Chewy rice cakes simmered in a spicy and sweet gochujang-based sauce." onclick="openLightbox(this)">
+      <img src="menu5.jpg" alt="Doenjang-Jjigae" data-text="Traditional Korean stew made with fermented soybean paste, tofu, and vegetables." onclick="openLightbox(this)">
+    </section>
+
+    <div class="lightbox" id="lightbox">
+      <div class="lb-background" onclick="closeLightbox()"></div>
+      <div class="lb-content">
+        <button class="lb-close" onclick="closeLightbox()">×</button>
+        <img id="lb-img" src="" alt="">
+        <p id="lb-text"></p>
+      </div>
+    </div>
+
+    <section class="tablet-menu">
+      <div class="item">
+        <img src="menu1.jpg" alt="Spicy Ramen">
+        <p><strong>Spicy Ramen</strong><br>Delicious spicy ramen with pork and egg.</p>
+      </div>
+      <div class="item">
+        <img src="menu2.jpg" alt="Bibimbap">
+        <p><strong>Bibimbap</strong><br>Traditional Korean rice bowl with vegetables and beef.</p>
+      </div>
+      <div class="item">
+        <img src="menu3.jpg" alt="Bulgogi">
+        <p><strong>Bulgogi</strong><br>Tender beef marinated in a sweet soy-based sauce and stir-fried with fresh vegetables.</p>
+      </div>
+      <div class="item">
+        <img src="menu4.jpg" alt="Tteokbokki">
+        <p><strong>Tteokbokki</strong><br>Chewy rice cakes simmered in a spicy and sweet gochujang-based sauce.</p>
+      </div>
+      <div class="item">
+        <img src="menu5.jpg" alt="Doenjang-Jjigae">
+        <p><strong>Doenjang-Jjigae</strong><br>Traditional Korean stew made with fermented soybean paste, tofu, and vegetables.</p>
+      </div>
+    </section>
+
+    <section class="mobile-map">
+      <p>Find us near Penn State Downtown!</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.207706876713!2d-77.8831976233184!3d40.80142927138038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cea62a9e027ec1%3A0xb783ada5e3d43f69!2sKimchi%20Korean%20Restaurant!5e0!3m2!1sko!2sus!4v1743022646571!5m2!1sko!2sus" 
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+   </main>
+
+   <footer>
+    <div class="location">1100 N Atherton St, State College, PA</div>
+    <div class="description">Located near Penn State downtown and open 7 days a week!</div>
+    <div class="contact">Contact: (814) 123-4567 | suimskitchen@gmail.com</div>
+   </footer>
+</body>
+</html>

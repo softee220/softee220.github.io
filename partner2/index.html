@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Partner Lab 2. Interactive Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../index.html" class="back-to-main">← Back to Main Page</a>
+
+    <h1 id="greeting">Hello User!</h1>
+    <p id="message">Welcome to our website.</p>
+
+    <div class="userInfo">
+        <label for="nameInput">Enter your name: </label>
+        <input type="text" id="nameInput" placeholder="Your Name">
+
+        <label for="messageInput">Enter your message: </label>
+        <input type="text" id="messageInput" placeholder="Your Message">
+        
+        <label for="bgColor">Choose background color: </label>
+        <select id="bgColor">
+            <option value="white">White</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="lightgreen">Light Green</option>
+            <option value="lightcoral">Light Coral</option>
+            <option value="lightgray">Light Gray</option>
+        </select>
+
+        <input type="button" value="Submit" onclick="submit();">
+    </div>
+
+    <div class="todo">
+        <h2>To-Do List</h2>
+        <input type="text" id="todoInput" placeholder="Enter a to-do item">
+        <input type="button" value="Add" onclick="addToDo();">
+        <ol id="todoList"></ol>
+    </div>
+
+    <script src="programs.js"></script>
+</body>
+</html>

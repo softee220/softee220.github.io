@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    display: grid;
+    grid-template-areas: 
+        'nav nav nav'
+        'header header header'
+        'sidebar content1 content1'
+        'sidebar content2 content3'
+        'footer footer footer';
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 30px;
+    padding: 20px;
+}
+
+header, footer {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    grid-area: header; 
+    font-family: "Bungee Tint";
+    font-size: 48px;
+}
+
+footer { 
+    grid-area: footer; 
+    color: black;
+}
+
+aside { 
+    grid-area: sidebar; 
+    background-color: #da3939; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-right: 20px;
+}
+
+main {
+    display: contents;
+}
+
+.content {
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+#content1 {
+    grid-area: content1;
+}
+
+.shake-text {
+    opacity: 0;
+    animation: shake 0.6s ease-in-out forwards;
+}
+
+@keyframes shake {
+    0% { transform: translateX(-30px); opacity: 0; }
+    25% { transform: translateX(15px); opacity: 0.5; }
+    50% { transform: translateX(-10px); opacity: 0.7; }
+    75% { transform: translateX(5px); opacity: 0.9; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+#content2 {
+    grid-area: content2;
+}
+
+#content2 img {
+    filter: blur(3px) grayscale(50%);
+    transition: filter 0.5s, transform 0.5s;
+}
+
+#content2 img:hover {
+    filter: blur(0) grayscale(0);
+    transform: rotate(-5deg) scale(1.05);
+}
+
+#content3 {
+    grid-area: content3;
+}
+
+#content3 img {
+    animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.content1 {
+    display: flex;
+    align-items: center;
+}
+
+.content1-text {
+    margin-left: 20px;
+}
+
+.content:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+} 
+
+.back-to-main {
+    grid-area: nav;
+    text-align: left;
+    padding: 12px 0;
+}
+  
+.back-to-main a {
+    background-color: #da3939;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+  
